@@ -1,42 +1,40 @@
 import './styled.css';
 import background1 from '../../assets/background1.png';
-import Box from '@mui/material/Box';
-import { TextField } from '@mui/material';
-import { ButtonLarge } from '../../Button/ButtonStyled';
+import { Button } from '../../Button/main';
+import { InputEmail, InputPassword } from '../../Input/main';
+import { Barlateral } from '../../barralateral/main'
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+  const handleClickSignIn = () => {
+      navigate('/recuperarsenha')
+  }
+
   return (
     <>
       <div className='login'>
-        <div className='BarLateral'>
-            <img src={background1} className='ImageLogin' alt='teste image' />
-        </div>
-        <div className='Login'>
+        <Barlateral img={background1}/>
+
+        <div className='Logincontainer'>
             <div className='cabecalho'>
               <h1>Já bateu seu ponto hoje?</h1>
             </div>
-                <Box
-                className="box"
-                component="form"
-                sx={{ '& > :not(style)': { m: 1, width: '60ch' } }}
-                noValidate
-                autoComplete="off"
-              >
-                <TextField id="outlined-basic" label="Email *" variant="outlined" />
-                <TextField
-                  id="filled-password-input"
-                  label="Password *"
-                  type="password"
-                  autoComplete="current-password"
-                  variant="outlined"
-                />
-                </Box> 
-                <ButtonLarge>Login</ButtonLarge>
+
+            <InputEmail />
+            <InputPassword />
+           
             <div className='CadSenha'>
               <div><a href='/cadastro'>Não está cadastrado? <strong>Cadastre-se</strong></a></div>
               <div><a href='/recuperarsenha'>Esqueci a senha</a></div>
             </div>
+
+            <Button title="Login" onClick={(handleClickSignIn)}/>
+
         </div>
+
       </div>
     </>
   )

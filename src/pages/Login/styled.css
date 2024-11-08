@@ -8,27 +8,6 @@
     height: 100vh;
     margin: 0 auto;
 }
-
-.BarLateral {
-    width: 50%;
-    height: 100%;
-    background-color: #4ADD8C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ImageLogin {
-    width: 80%;
-    height: auto;
-}
-
-.box{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .cabecalho {
     width: 60%;
     margin-left: 60px;
@@ -41,7 +20,7 @@
 
 }
 
-.Login {
+.Logincontainer {
     width: 60%;
     display: block;
     flex-direction: column;
