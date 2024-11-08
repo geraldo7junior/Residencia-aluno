@@ -23,8 +23,8 @@ const Login = () => {
               <h1>Já bateu seu ponto hoje?</h1>
             </div>
 
-            <InputEmail />
-            <InputPassword />
+            <InputEmail label='Email *'/>
+            <InputPassword label='Senha *'/>
            
             <div className='CadSenha'>
               <div><a href='/cadastro'>Não está cadastrado? <strong>Cadastre-se</strong></a></div>

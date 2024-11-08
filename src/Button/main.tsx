@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonContainer } from "./styles"
+import { ButtonContainer, ButtonSm} from "./styles"
 
 interface ButtonProps {
   title: string;
@@ -9,12 +9,20 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({title, onClick}) => {
   return (
+    <>
     <ButtonContainer onClick={onClick}>
       {title}
-    </ButtonContainer>
+    </ButtonContainer>  
+    </>
   )
 }
 
+const ButtonSmall: React.FC<ButtonProps> = ({title, onClick}) => {
+  return(
+    <ButtonSm onClick={onClick}>
+      {title}
+    </ButtonSm>
+  )
+}
 
-
-export { Button }
+export { Button, ButtonSmall }

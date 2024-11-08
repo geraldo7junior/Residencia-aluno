@@ -1,4 +1,4 @@
-.senha {
+.cadastro {
     display:flex;
     max-width: 1920px;
     max-height: 1080px;
@@ -9,11 +9,11 @@
     margin: 0 auto;
 }
 
-.CabSenha {
+.CabecalhoCadastro {
     width: 60%;
     margin-left: 70px;
-    margin-bottom: 60px; 
-    margin-top: 180px;
+    margin-bottom: 30px; 
+    margin-top: 80px;
 
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
 
 }
 
-.RecSenha {
+.CadastroContainer {
     width: 50%;
     display: block;
     flex-direction: column;
