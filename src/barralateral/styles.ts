@@ -13,3 +13,14 @@ export const BarLateral = styled.div `
     }
 
 `
+
+export const Menu = styled.div `
+    width: 15%;
+    height: 100%;
+    background-color: #F5F0F5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+`

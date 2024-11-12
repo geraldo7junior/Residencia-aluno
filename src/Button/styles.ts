@@ -54,6 +54,25 @@ export const ButtonContainer = styled.button `
     }
   
   `
+
+  export const ButtonMenu = styled.button `
+    display: flex;
+    margin: 10px 0px;
+    position relative;
+
+    flex-direction: column;
+    justify-Content: center;
+    align-items: center;
+    align-self: stretch;
+
+    color: #000000;
+    border-Radius: 4px;
+    background: #FFFFFF;
+    width: 180px;
+    height: 60px;
+   
+`
+
   
 
   

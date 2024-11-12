@@ -9,8 +9,8 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const handleClickSignIn = () => {
-      navigate('/recuperarsenha')
+  const handleClickLogin = () => {
+      navigate('/home')
   }
 
   return (
@@ -31,7 +31,7 @@ const Login = () => {
               <div><a href='/recuperarsenha'>Esqueci a senha</a></div>
             </div>
 
-            <Button title="Login" onClick={(handleClickSignIn)}/>
+            <Button title="Login" onClick={(handleClickLogin)}/>
 
         </div>
 
