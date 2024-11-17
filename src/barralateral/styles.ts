@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { breakpoints } from '../breakpoints';
+
 
 export const BarLateral = styled.div `
     width: 50%;
@@ -8,9 +10,18 @@ export const BarLateral = styled.div `
     justify-content: center;
     align-items: center;
 
-    img{
-        width: 80%;
+    @media ${breakpoints.md} {
+        img{
+            width: 80%;
+        }
     }
+
+    @media ${breakpoints.bg} {
+        img{
+            width: 100%;
+        }
+    }
+
 
 `
 
@@ -24,3 +35,4 @@ export const Menu = styled.div `
     flex-direction: column;
 
 `
+

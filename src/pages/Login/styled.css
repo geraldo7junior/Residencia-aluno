@@ -1,15 +1,13 @@
+
+
 .login {
     display:flex;
-    max-width: 1920px;
-    max-height: 1080px;
-    min-width: 1366px;
-    min-height: 768px;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
 }
 .cabecalho {
-    width: 60%;
+    width: 40%;
     margin-left: 60px;
     margin-bottom: 80px; 
     margin-top: 180px;
@@ -20,14 +18,30 @@
 
 }
 
+@media (max-width: 1366px) {
+    .cabecalho {
+        width: 60%; 
+        margin-left: 60px; 
+        margin-top: 100px; 
+    }
+}
+
 .Logincontainer {
     width: 60%;
-    display: block;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 0 50px;
 }
+
+@media (max-width: 768px) {
+    .Logincontainer {
+        width: 90%; 
+        padding: 0 20px; 
+    }
+}
+
 .CadSenha {
     color: #000;
     font-feature-settings: 'liga' off, 'clig' off;
@@ -43,6 +57,17 @@
 .CadSenha > div {
     margin: 0px 140px 0 0;
     padding: 1px 8px;
+}
+
+@media (max-width: 1366px) {
+    .CadSenha > div {
+        margin: 0 140px 0 0; /* Reduz a margem à direita */
+        padding: 1px 8px; /* Ajuste o padding */
+    }
+
+    .CadSenha {
+        font-size: 12px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
 }
 
 a {
@@ -67,10 +92,4 @@ a:active {
 
 h1 {
     font-size: 24px;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }
