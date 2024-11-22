@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 interface ButtonProps {
@@ -70,7 +71,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
 
   export const ButtonMenu = styled.button<ButtonProps> `
     display: flex;
-    margin: 5px 10px;
+    margin: 10px 30px;
     position relative;
 
     flex-direction: column;

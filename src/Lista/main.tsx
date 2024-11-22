@@ -75,7 +75,6 @@ const List: React.FC = () => {
                         <TableCell>{calcularRegistros(registro)}</TableCell>
                     </TableRow>
                     ))}
-                    
                 </tbody>
             </Table>
         </Container>

@@ -79,8 +79,7 @@ const Header: React.FC = () => {
     
         // Atualiza a tabela na UI
         window.dispatchEvent(new Event("storage"));
-    
-        alert(`Ponto registrado com sucesso às ${horarioAtual}!`);
+
     };
     const pontosHoje = registros.filter((registro) => registro.data === DiaSemana.toLocaleDateString("pt-BR")).length;
     return (
@@ -94,7 +93,7 @@ const Header: React.FC = () => {
             <Hour>
                 <p>{HoraAtual}</p>
             </Hour>
-            <Buttonponto title='BATER PONTO' fontWeight="Bold" letterSpacing="0.8px" onClick={handleBaterPonto}/>
+            <Buttonponto title='BATER PONTO' fontSize="15px" fontWeight="Bold" letterSpacing="0.8px" onClick={handleBaterPonto}/>
         </Row>
       </Container>
       </>

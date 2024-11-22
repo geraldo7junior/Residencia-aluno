@@ -3,9 +3,7 @@ import React from "react";
 import { Buttonmenu } from '../Button/main';
 import { useNavigate } from 'react-router-dom'
 interface imagemProps {
-
     img: string;
-
 }
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { ButtonContainer, ButtonSm, ButtonMenu, ButtonPonto} from "./styles"
 
+
 interface ButtonProps {
   title: string;
   onClick: () => void;
@@ -30,6 +31,7 @@ const ButtonSmall: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeigh
 }
 
 const Buttonmenu: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+
   return (
     <ButtonMenu onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
       {title}

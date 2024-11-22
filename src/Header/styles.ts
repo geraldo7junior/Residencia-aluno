@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div `
-    width: 80%;
-    height: 80px;
+    width: 60%;
+    height: 100px;
     background: #FFFFFF;
     box-shadow: 0px 4px 26px #BC9AD640;
-    margin: 100px auto;
-
+    margin: 20px 100px;
+    position: fixed;
 
     display: flex;
     justify-Content: space-between;  
@@ -21,7 +21,7 @@ export const Row = styled.div `
 
 export const Diaria = styled.div `
     margin: 10px;
-    padding: 0px 25px;
+    padding: 0px 10px;
     p {
         font-family: 'Open Sans';
         font-style: normal;
@@ -30,7 +30,7 @@ export const Diaria = styled.div `
 `
 
 export const Hour = styled.div`
-    padding: 0 340px;
+    padding: 0 320px;
     p {
         font-family: 'Open Sans';
         font-style: normal;

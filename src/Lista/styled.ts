@@ -2,13 +2,16 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
-    width: 100%;
-    height: 390px;
-    background: #FFFFFF;
-
+    width: 80%;
+    height: calc(70vh - 120px);
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
     display: flex;
     justify-Content: space-between;  
     align-Items: center; 
+    background: #ffffff;
 `
 
 // Tabela
@@ -16,6 +19,7 @@ export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  table-layout: fixed;
 `;
 
 // Cabeçalho da tabela
@@ -24,6 +28,8 @@ export const HeaderRow = styled.tr`
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
+  position: sticky;
+  top: 0;
 `;
 
 // Linha da tabela
@@ -39,6 +45,8 @@ export const TableCell = styled.td`
   padding: 12px;
   font-size: 14px;
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
 
   &:first-child {
     border-left: 1px solid #ddd;
