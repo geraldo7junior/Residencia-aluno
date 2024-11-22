@@ -2,7 +2,7 @@
 import './styled.css';
 import { MenuComponent } from "../../barralateral/main";
 import { Header } from '../../Header/main';
-
+import { List } from '../../Lista/main';
 
 const Home = () => {
     return (
@@ -10,6 +10,7 @@ const Home = () => {
             <MenuComponent />
             <div className='HomeContainer'>
                 <Header />
+                <List />   
             </div>
         </div>
     )

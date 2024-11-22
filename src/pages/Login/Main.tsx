@@ -26,6 +26,7 @@ const Login = () => {
 
       if (email === storedEmail && password === storedPassword) {
         alert("Login realizado com Sucesso!");
+        localStorage.setItem("currentUser", email);
         navigate("/home");
       } else {
           alert("Email ou senha incorretos");
