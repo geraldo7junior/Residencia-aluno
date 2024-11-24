@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonContainer, ButtonSm, ButtonMenu, ButtonPonto} from "./styles"
+import { ButtonContainer, ButtonSm, ButtonMenu, ButtonPonto} from "./styles";
 
 
 interface ButtonProps {
@@ -8,7 +8,7 @@ interface ButtonProps {
   fontSize?: string;
   fontWeight?: string;
   letterSpacing?: string;
-
+  children?: React.ReactNode;
 }
 
 
@@ -22,18 +22,20 @@ const Button: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) =
   )
 }
 
-const ButtonSmall: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+const ButtonSmall: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight, children}) => {
   return(
     <ButtonSm onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
+      {children}
       {title}
     </ButtonSm>
   )
 }
 
-const Buttonmenu: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+const Buttonmenu: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight, children}) => {
 
   return (
     <ButtonMenu onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
+      {children}
       {title}
     </ButtonMenu>
   )

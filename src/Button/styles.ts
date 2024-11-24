@@ -44,7 +44,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     padding: 10px;  
     position: relative;
 
-    flex-direction: column;
+    flex-direction: row;
     justify-Content: center;  
     align-Items: center;  
     align-Self: stretch; 
@@ -52,7 +52,8 @@ export const ButtonContainer = styled.button<ButtonProps> `
     color: #000000;
     border-Radius: 4px;  
     background: #4ADD8C;  
-    width: 80px;
+    width: 100px;
+    gap: 12px;
     border: none;
     cursor: pointer;
     font-size: ${(props) => props.fontSize || "16px"};
@@ -74,7 +75,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     margin: 10px 30px;
     position relative;
 
-    flex-direction: column;
+    flex-direction: row;
     justify-Content: center;
     align-items: center;
     align-self: stretch;
@@ -85,6 +86,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     background: #FFFFFF;
     width: 180px;
     height: 60px;
+    gap: 10px;
 
     font-size: ${(props) => props.fontSize || "16px"};
     font-weight: ${(props) => props.fontWeight || "normal"};

@@ -88,7 +88,7 @@ const Header: React.FC = () => {
         <Row>
             <Diaria>
                 <p><strong>{DiadaSemana}</strong></p>
-                <p>Registros de hoje: {pontosHoje}</p>
+                <p>Registros: {pontosHoje}</p>
             </Diaria>
             <Hour>
                 <p>{HoraAtual}</p>

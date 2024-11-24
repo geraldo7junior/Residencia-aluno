@@ -2,16 +2,22 @@ import Box from '@mui/material/Box';
 import { TextField } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers';
 import { Dayjs } from 'dayjs';
-import  React  from 'react';
+import  React, {useState}  from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import InputAdornment from '@mui/material/InputAdornment';
+import EmailIcon from '@mui/icons-material/Email';
+import PersonIcon from '@mui/icons-material/Person';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import IconButton from '@mui/material/IconButton';
+import WorkIcon from '@mui/icons-material/Work';
 
 interface BoxProps {
     label: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 
 }
-
 
 interface DateInputProps {
     label: string;
@@ -30,13 +36,30 @@ const InputEmail: React.FC<BoxProps> = ({label, onChange}) => {
                 noValidate
 >
 
-                <TextField id="email-input" label={label} variant="outlined" type='email' autoComplete="username" onChange={onChange} />
+                <TextField id="email-input" label={label} 
+                    variant="outlined" type='email' 
+                    autoComplete="username" onChange={onChange} 
+                    InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <EmailIcon />
+                          </InputAdornment>
+                        ),
+                      }}/>
             </Box> 
 
     )
 }
 
 const InputPassword: React.FC<BoxProps> = ({label, onChange}) => {
+    
+    const [showPassword, setShowPassword] = useState(false);
+
+    // Função para alternar o estado de visibilidade
+    const togglePasswordVisibility = () => {
+      setShowPassword((prev) => !prev);
+    };
+
     return(
         <Box
             className="box"
@@ -55,10 +78,23 @@ const InputPassword: React.FC<BoxProps> = ({label, onChange}) => {
             <TextField
                 id="password-input"
                 label={label}
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 autoComplete="current-password"
                 variant="outlined" 
-                onChange={onChange}/>
+                onChange={onChange}
+                InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          onClick={togglePasswordVisibility}
+                          edge="end"
+                          aria-label="toggle password visibility"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}/>
                 
         </Box>
 )}
@@ -72,7 +108,19 @@ const InputConfirmarEmail: React.FC<BoxProps> = ({label, onChange}) => {
                 sx={{ '& > :not(style)': { m: 1, width: '60ch' } }}
                 noValidate>
 
-                <TextField id="conf-email" label={label} variant="outlined" type='email' autoComplete="username" onChange={onChange} />
+                <TextField id="conf-email" 
+                label={label} 
+                variant="outlined" 
+                type='email' 
+                autoComplete="username" 
+                onChange={onChange}
+                InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <EmailIcon />
+                      </InputAdornment>
+                    ),
+                  }} />
             </Box> 
 
     )
@@ -80,6 +128,15 @@ const InputConfirmarEmail: React.FC<BoxProps> = ({label, onChange}) => {
 
 
 const InputConfirmarPassword: React.FC<BoxProps> = ({label, onChange}) => {
+    
+    const [showPassword, setShowPassword] = useState(false);
+
+    // Função para alternar o estado de visibilidade
+    const togglePasswordVisibility = () => {
+      setShowPassword((prev) => !prev);
+    };
+
+
     return(
         <Box
             className="box"
@@ -96,12 +153,25 @@ const InputConfirmarPassword: React.FC<BoxProps> = ({label, onChange}) => {
                 sx={{ display: 'none' }}
             />
             <TextField
-                id="filled-Confpassword-input"
+                id="password-input"
                 label={label}
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 autoComplete="current-password"
                 variant="outlined" 
-                onChange={onChange}/>
+                onChange={onChange}
+                InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          onClick={togglePasswordVisibility}
+                          edge="end"
+                          aria-label="toggle password visibility"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}/>
                 
         </Box>
 )}
@@ -115,7 +185,18 @@ const InputName: React.FC<BoxProps> = ({label, onChange}) => {
             noValidate
             autoComplete="Name">
 
-            <TextField id="outlined-basicName" label={label} variant="outlined" type='text' onChange={onChange}/>
+            <TextField id="outlined-basicName" 
+                label={label} 
+                variant="outlined" 
+                type='text' 
+                onChange={onChange}
+                InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <PersonIcon />
+                      </InputAdornment>
+                    ),
+                  }}/>
             </Box> 
 
     )
@@ -129,7 +210,18 @@ const InputCargo: React.FC<BoxProps> = ({label, onChange}) => {
             sx={{ '& > :not(style)': { m: 1, width: '60ch' }, display:'flex', }}
             noValidate
             autoComplete="off">
-                <TextField id="outlined-basicCargo" label={label} variant="outlined" type='text' onChange={onChange} />
+                <TextField id="outlined-basicCargo" 
+                    label={label} 
+                    variant="outlined" 
+                    type='text' 
+                    onChange={onChange} 
+                    InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <WorkIcon />
+                          </InputAdornment>
+                        ),
+                      }}/>
             </Box> 
 
     )
