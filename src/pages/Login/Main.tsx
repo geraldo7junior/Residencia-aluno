@@ -1,8 +1,8 @@
 import './styled.css';
 import background1 from '../../assets/background1.png';
-import { Button } from '../../Button/main';
-import { InputEmail, InputPassword } from '../../Input/main';
-import { Barlateral } from '../../barralateral/main'
+import { ButtonPrimary } from '../../Components/Button/main';
+import { InputEmail, InputPassword } from '../../Components/Input/main';
+import { Barlateral } from '../../Components/barralateral/main'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
@@ -53,7 +53,7 @@ const Login = () => {
               <div><a href='/recuperarsenha'>Esqueci a senha</a></div>
             </div>
 
-            <Button title="Login" onClick={(handleLogin)}/>
+            <ButtonPrimary title="Login" onClick={(handleLogin)}/>
 
         </div>
 

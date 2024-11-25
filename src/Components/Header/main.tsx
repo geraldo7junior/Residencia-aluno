@@ -2,6 +2,7 @@ import { Container, Row, Diaria, Hour } from "./styles";
 import { Buttonponto } from "../Button/main";
 import { useState, useEffect } from 'react';
 
+
  interface Registro {
     data: string;
     entrada: string;
@@ -100,4 +101,34 @@ const Header: React.FC = () => {
     )
   }
 
-  export { Header }
+  const HeaderCorrigirPonto: React.FC = () => {
+
+    const [userData, setUserData] = useState<{ 
+        nome: string; 
+        cargo: string; 
+        dataNascimento: string; 
+    } | null>(null);
+
+    useEffect(() => {
+        const storedData = localStorage.getItem("userData"); // Substitua pelo nome da chave usada no localStorage
+        if (storedData) {
+            setUserData(JSON.parse(storedData));
+        } else {
+            alert("Dados do usuário não encontrados! Verifique se você está logado.");
+        }
+    }, []);
+
+    return(
+        <Container>
+            <Row>
+                <Diaria>
+                    <p><strong>Nome:</strong> {userData?.nome || "Não informado"}</p>
+                    <p><strong>Cargo:</strong> {userData?.cargo || "Não informado"}</p>
+                    <p><strong>Data de Nascimento:</strong> {userData?.dataNascimento || "Não informado"}</p>
+                </Diaria>
+            </Row>
+        </Container>
+    )
+  }
+
+  export { Header, HeaderCorrigirPonto }

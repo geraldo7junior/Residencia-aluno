@@ -241,4 +241,33 @@ const DateInput: React.FC<DateInputProps> = ({label, value, onChange}) => {
     );
 }
 
-export { InputEmail, InputConfirmarEmail ,InputPassword, InputConfirmarPassword, InputName, InputCargo, DateInput }
+const CommentInput: React.FC<BoxProps> = ({label}) => {
+  return(
+    <Box component="form"
+    sx={{ '& .MuiTextField-root': { m: 3, width: '50ch' }, 
+    display: 'flex', 
+    justifyContent:'center', 
+    alignItems:'center' }}
+    noValidate
+    autoComplete="off"
+  >
+    <TextField
+          id="outlined-multiline-static"
+          label={label}
+          multiline
+          maxRows={4}
+          defaultValue=""
+          sx={{
+            width: "100%", // Define a largura
+            height: "100px", // Altura fixa para a caixa
+            '& .MuiInputBase-root': {
+              height: "100%", // Garante que o conteúdo preencha toda a altura
+            },
+          }}
+        />
+
+    </Box>
+  )
+}
+
+export { InputEmail, InputConfirmarEmail ,InputPassword, InputConfirmarPassword, InputName, InputCargo, DateInput, CommentInput }

@@ -1,8 +1,8 @@
 import './styles.css'
 import background3 from '../../assets/background3.png'
-import { Barlateral } from '../../barralateral/main'
-import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../../Input/main'
-import { Button } from '../../Button/main'
+import { Barlateral } from '../../Components/barralateral/main'
+import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../../Components/Input/main'
+import { ButtonPrimary } from '../../Components/Button/main'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import { Dayjs } from 'dayjs';
@@ -48,7 +48,7 @@ const Cadastro = () => {
         }
 
         const userDados = { email, password, nome,  DataNasc: DataNasc ? DataNasc.format('YYYY-MM-DD') : '', cargo };
-        localStorage.setItem("user", JSON.stringify(userDados));
+        localStorage.setItem("userData", JSON.stringify(userDados));
         alert("Cadastro realizado com sucesso!");
         console.log("Passou aqui4");
         navigate("/");
@@ -75,7 +75,7 @@ const Cadastro = () => {
                 </div>
                 <InputCargo label='Insira seu cargo *' onChange={(e) => setCargo(e.target.value)}/>
                 
-                <Button title="Finalizar Cadastro" onClick={handleRegister}/>
+                <ButtonPrimary title="Finalizar Cadastro" onClick={handleRegister}/>
                 <div className='TextDown'>
                     <h3><a href="/">Já tem uma conta? <strong>Logue agora!</strong></a></h3>
                 </div>

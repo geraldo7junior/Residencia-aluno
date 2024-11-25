@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import { ButtonPrimary } from "../Button/main";
+import "./styles.css"
 
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -30,6 +32,7 @@ export default function InputFileUpload() {
   };
 
   return (
+    <>
     <div style={{ textAlign: "center" }}>
       <Button
         component="label"
@@ -53,5 +56,11 @@ export default function InputFileUpload() {
         </FilePreview>
       )}
     </div>
+    <div className="BotaoJustificar">
+      <ButtonPrimary title="Justificar Ponto"/>
+      </div>
+    <div>
+    </div>
+   </> 
   );
 }

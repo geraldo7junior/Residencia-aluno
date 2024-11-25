@@ -12,7 +12,7 @@ interface ButtonProps {
 }
 
 
-const Button: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+const ButtonPrimary: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
   return (
     <>
     <ButtonContainer onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
@@ -52,4 +52,4 @@ const Buttonponto: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeigh
 }
 
 
-export { Button, ButtonSmall, Buttonmenu, Buttonponto }
+export { ButtonPrimary, ButtonSmall, Buttonmenu, Buttonponto }

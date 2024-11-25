@@ -1,8 +1,8 @@
 
 import './styled.css';
-import { MenuComponent } from "../../barralateral/main";
-import { Header } from '../../Header/main';
-import { List } from '../../Lista/main';
+import { MenuComponent } from "../../Components/barralateral/main";
+import { Header } from '../../Components/Header/main';
+import { List } from '../../Components/Lista/main';
 
 const Home = () => {
     return (

@@ -40,6 +40,10 @@ const MenuComponent = () => {
         navigate('/justificarponto')
     }
 
+    const handleClickCorrigir = () => {
+        navigate('/corrigirponto')
+    }
+
     return (
         <Menu>
             <Buttonmenu title='Home' onClick={(handleClickHome)}>
@@ -52,7 +56,7 @@ const MenuComponent = () => {
                     <ArticleIcon fontSize='medium'/>
                 </Stack>
             </Buttonmenu>
-            <Buttonmenu title='Corrigir Ponto' onClick={(handleClickCadastro)}>
+            <Buttonmenu title='Corrigir Ponto' onClick={(handleClickCorrigir)}>
                 <Stack>
                     <EditIcon fontSize='medium'/>
                 </Stack>

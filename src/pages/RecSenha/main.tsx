@@ -1,11 +1,11 @@
 import './styles.css';
 import background2 from  '../../assets/background2.png';
-import { Barlateral } from '../../barralateral/main';
-import { Button, ButtonSmall } from '../../Button/main';
+import { Barlateral } from '../../Components/barralateral/main';
+import { ButtonPrimary, ButtonSmall } from '../../Components/Button/main';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Stack } from '@mui/material';
-import { InputEmail } from '../../Input/main';
+import { InputEmail } from '../../Components/Input/main';
 
 
 
@@ -34,7 +34,7 @@ const RecSenha = () => {
                     </div>
                     <InputEmail label='Email *'/>
             
-                <Button title="Recuperar Senha" onClick={handleClickRecSenha} />
+                <ButtonPrimary title="Recuperar Senha" onClick={handleClickRecSenha} />
             </div>
         </div>
         </>
