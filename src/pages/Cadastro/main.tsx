@@ -1,5 +1,5 @@
 import './styles.css'
-import background3 from '../../assets/background3.png'
+import Cadastroimg from '../../assets/Cadastro.svg'
 import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../../Components/Input/main'
 import { ButtonPrimary } from '../../Components/Button/main'
 import { useNavigate } from 'react-router-dom';
@@ -66,7 +66,7 @@ const Cadastro = () => {
 
     return(
         <div className="cadastro">
-            <Barlateral img={background3} />
+            <Barlateral img={Cadastroimg} />
             <div className='CadastroContainer'>
                 <div className='CabecalhoCadastro'>
                     <h1>Cadastre-se! É de graça!</h1>

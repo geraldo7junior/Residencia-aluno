@@ -1,5 +1,5 @@
 import './styled.css';
-import background1 from '../../assets/background1.png';
+import login from '../../assets/Login.svg';
 import { ButtonPrimary } from '../../Components/Button/main';
 import { InputEmail, InputPassword } from '../../Components/Input/main';
 import { Barlateral } from '../../Components/barralateral/main'
@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <>
       <div className='login'>
-        <Barlateral img={background1}/>
+        <Barlateral img={login}/>
 
         <div className='Logincontainer'>
             <div className='cabecalho'>

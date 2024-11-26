@@ -1,5 +1,5 @@
 import './styles.css';
-import background2 from  '../../assets/background2.png';
+import RecuperarSenha from  '../../assets/RecSenha.svg';
 import { Barlateral } from '../../Components/barralateral/main';
 import { ButtonPrimary, ButtonSmall } from '../../Components/Button/main';
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ const RecSenha = () => {
     return (
         <>
         <div className='senha'>
-            <Barlateral img={background2}/>
+            <Barlateral img={RecuperarSenha}/>
             <div className='RecSenha'>
                 <div className='BotaoFlutuante'>
                     <ButtonSmall title='Voltar' onClick={handleClickLogin}>
