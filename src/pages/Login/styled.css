@@ -1,5 +1,3 @@
-
-
 .login {
     display:flex;
     width: 100vw;
@@ -7,15 +5,13 @@
     margin: 0 auto;
 }
 .cabecalho {
-    width: 40%;
-    margin-left: 60px;
-    margin-bottom: 80px; 
-    margin-top: 180px;
+    width: 60%;
+    margin-bottom: 20px; 
 
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: row;
 }
 
 @media (max-width: 1366px) {
@@ -27,52 +23,59 @@
 }
 
 .Logincontainer {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 50px;
+    padding: 100px;
 }
 
-@media (max-width: 768px) {
+.LoginInput {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+@media (max-width: 1366px) {
     .Logincontainer {
-        width: 90%; 
-        padding: 0 20px; 
+        width: 100%; 
+        padding: 0 100px; 
     }
 }
 
 .CadSenha {
+    width: 100%;
     color: #000;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Kumbh Sans", Helvetica, sans-serif;
-    font-size: 13px;
     font-style: regular;
     font-weight: 400;
+    font-size: 30px;
     line-height: 26px; /* 173.333% */
     letter-spacing: 0.46px;
     display: flex;
 }
 
 .CadSenha > div {
-    margin: 0px 140px 0 0;
+    margin: 0px 70px 0 0;
     padding: 1px 8px;
 }
 
 @media (max-width: 1366px) {
     .CadSenha > div {
-        margin: 0 140px 0 0; /* Reduz a margem à direita */
-        padding: 1px 8px; /* Ajuste o padding */
-    }
-
-    .CadSenha {
-        font-size: 12px; /* Reduz o tamanho da fonte em telas pequenas */
+        width: 100%;
+        margin: 0 100px 0 0; /* Reduz a margem à direita */
+        padding: 4px 8px; /* Ajuste o padding */
+        width: 14px;
     }
 }
 
 a {
     color: #000;
     text-decoration: none;
+    font-size: 16px !important;
 }
 
 a:hover {

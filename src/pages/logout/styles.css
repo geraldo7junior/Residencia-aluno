@@ -1,0 +1,38 @@
+.logout {
+    display:flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.Cablogout {
+    width: 40%;
+    margin-left: 150px;
+    margin-bottom: 20px; 
+    margin-top: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.ButtonLogout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30%;
+    margin-left: 10%;
+}
+
+.exit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px;
+}
+

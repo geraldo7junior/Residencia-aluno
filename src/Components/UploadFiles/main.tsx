@@ -31,6 +31,10 @@ export default function InputFileUpload() {
     }
   };
 
+  const handleJustificativa = () => {
+    alert("Seu documento foi enviado comm sucesso");
+  }
+
   return (
     <>
     <div style={{ textAlign: "center" }}>
@@ -57,7 +61,7 @@ export default function InputFileUpload() {
       )}
     </div>
     <div className="BotaoJustificar">
-      <ButtonPrimary title="Justificar Ponto"/>
+      <ButtonPrimary title="Justificar Ponto" onClick={handleJustificativa}/>
       </div>
     <div>
     </div>

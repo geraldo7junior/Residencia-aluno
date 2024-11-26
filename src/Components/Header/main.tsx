@@ -1,4 +1,4 @@
-import { Container, Row, Diaria, Hour } from "./styles";
+import { Container, Row, Diaria, Hour, ContainerSecond, UserDados, ContainerMiddle } from "./styles";
 import { Buttonponto } from "../Button/main";
 import { useState, useEffect } from 'react';
 
@@ -15,7 +15,7 @@ import { useState, useEffect } from 'react';
 const Header: React.FC = () => {
     const [DiaSemana, setDiaSemana,] = useState(new Date());
     const [registros, setRegistros] = useState<Registro[]>([]);
-
+    
 
 
     useEffect(()=> {
@@ -27,7 +27,6 @@ const Header: React.FC = () => {
             const registrosSalvos = JSON.parse(localStorage.getItem(`registros_${currentUser}`) || "[]");
             setRegistros(registrosSalvos); // Atualiza o estado com os registros mais recentes
         }
-
         return () => clearInterval(Atualizacao);
     }, []);
 
@@ -83,6 +82,7 @@ const Header: React.FC = () => {
 
     };
     const pontosHoje = registros.filter((registro) => registro.data === DiaSemana.toLocaleDateString("pt-BR")).length;
+    
     return (
       <>
       <Container>
@@ -106,29 +106,46 @@ const Header: React.FC = () => {
     const [userData, setUserData] = useState<{ 
         nome: string; 
         cargo: string; 
-        dataNascimento: string; 
+        DataNasc: string; 
     } | null>(null);
 
     useEffect(() => {
-        const storedData = localStorage.getItem("userData"); // Substitua pelo nome da chave usada no localStorage
-        if (storedData) {
-            setUserData(JSON.parse(storedData));
+        const currentUserEmail = JSON.parse(localStorage.getItem("currentUser") || "[]" ); // Substitua pelo nome da chave usada no localStorage
+
+        if (!currentUserEmail) {
+            alert("Usuário não logado. Redirecionando para a página de login...");
+            return;
+        }
+
+        const storedUsers = JSON.parse(localStorage.getItem("userData") || "[]");
+        
+        const loggedUser = storedUsers.find((user: { email: string }) => user.email === currentUserEmail);
+
+        if (loggedUser) {
+            setUserData(loggedUser);
         } else {
-            alert("Dados do usuário não encontrados! Verifique se você está logado.");
+            alert("Dados do usuário não encontrados!");
         }
     }, []);
-
     return(
-        <Container>
+        <ContainerSecond>
             <Row>
-                <Diaria>
+                <UserDados>
                     <p><strong>Nome:</strong> {userData?.nome || "Não informado"}</p>
                     <p><strong>Cargo:</strong> {userData?.cargo || "Não informado"}</p>
-                    <p><strong>Data de Nascimento:</strong> {userData?.dataNascimento || "Não informado"}</p>
-                </Diaria>
+                    <p><strong>Data de Nascimento:</strong> {userData?.DataNasc || "Não informado"}</p>
+                </UserDados>
             </Row>
-        </Container>
+        </ContainerSecond>
     )
   }
 
-  export { Header, HeaderCorrigirPonto }
+const containermiddle = () => {
+    return(
+        <ContainerMiddle>
+        
+        </ContainerMiddle>
+    )
+}
+
+  export { Header, HeaderCorrigirPonto, containermiddle }

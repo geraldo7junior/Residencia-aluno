@@ -1,11 +1,13 @@
 import './styles.css'
 import { Route, BrowserRouter as Router, Routes} from "react-router-dom"
-import { Login }  from './pages/Login/main';
+import { Login }  from './pages/login/login';
 import { RecSenha } from './pages/RecSenha/main';
 import { Cadastro } from './pages/Cadastro/main'
 import { Home } from './pages/Home/main';
 import { Justificar } from './pages/Justificar/main';
 import { CorrigirPonto } from './pages/Corrigir/main';
+import { Logout } from './pages/logout/main'
+
 function app () {
     return(
         <Router>
@@ -16,6 +18,7 @@ function app () {
                 <Route path='/home' element={<Home />} />
                 <Route path='/justificarponto' element={<Justificar />} />
                 <Route path='/corrigirponto' element={<CorrigirPonto />} />
+                <Route path='/logout' element={<Logout />} />
             </Routes>
         </Router>
     )

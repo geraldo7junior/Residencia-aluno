@@ -70,7 +70,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
   
   `
 
-  export const ButtonMenu = styled.button<ButtonProps> `
+  export const ButtonMenu = styled.button<ButtonProps & { isActive?: boolean }> `
     display: flex;
     margin: 10px 30px;
     position relative;
@@ -81,19 +81,19 @@ export const ButtonContainer = styled.button<ButtonProps> `
     align-self: stretch;
     border: none;
 
-    color: #000000;
-    border-Radius: 4px;
-    background: #FFFFFF;
+    color: ${(props) => (props.isActive ? "#000000" : "#000000")};
+    background: ${(props) => (props.isActive ? "#4ADD8C" : "#FFFFFF")};
+    border-radius: 4px;
     width: 180px;
     height: 60px;
-    gap: 10px;
+    gap: 10px;;
 
     font-size: ${(props) => props.fontSize || "16px"};
     font-weight: ${(props) => props.fontWeight || "normal"};
     letter-spacing: ${(props) => props.letterSpacing || "0px"};
 
-    &:hover {
-      background: #4ADD8C; 
+     &:hover {
+      background: ${(props) => (props.isActive ? "#43C078" : "#4ADD8C")};
     }
    
 `

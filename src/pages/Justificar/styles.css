@@ -16,6 +16,7 @@
     left: 5%;
     width: 100%;
   }
+
   .JustificarPonto {
     display: flex;
     flex-direction: column;
@@ -23,5 +24,9 @@
     justify-content: center; /* Centraliza os itens no eixo vertical */
     padding: 0 50px;
     width: 100%;
+
+    p{
+      font-size: 20px !important;
+    }
   }
   

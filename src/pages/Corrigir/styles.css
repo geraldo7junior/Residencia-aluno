@@ -22,8 +22,11 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza os itens no eixo horizontal */
-    padding: 0 50px;
+    padding: 0 40px;
+    top: 5%;
+    right: 2%;
     width: 100%;
+    position: relative;
   }
   
   .BotaoSolicitar {
@@ -31,5 +34,7 @@
     flex-direction: row;
     align-items: center;
     justify-items: center;
-
+    position:relative;
+    left: 25%;
+    margin: 40px;
   }

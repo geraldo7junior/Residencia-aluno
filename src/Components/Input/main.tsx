@@ -244,7 +244,7 @@ const DateInput: React.FC<DateInputProps> = ({label, value, onChange}) => {
 const CommentInput: React.FC<BoxProps> = ({label}) => {
   return(
     <Box component="form"
-    sx={{ '& .MuiTextField-root': { m: 3, width: '50ch' }, 
+    sx={{ '& .MuiTextField-root': { m: 4, width: '50ch' }, 
     display: 'flex', 
     justifyContent:'center', 
     alignItems:'center' }}
@@ -269,5 +269,6 @@ const CommentInput: React.FC<BoxProps> = ({label}) => {
     </Box>
   )
 }
+
 
 export { InputEmail, InputConfirmarEmail ,InputPassword, InputConfirmarPassword, InputName, InputCargo, DateInput, CommentInput }

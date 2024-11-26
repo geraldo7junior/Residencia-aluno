@@ -3,7 +3,7 @@ import { breakpoints } from '../../breakpoints';
 
 
 export const BarLateral = styled.div `
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: #4ADD8C;
     display: flex;
@@ -24,7 +24,6 @@ export const BarLateral = styled.div `
 
 
 `
-
 export const Menu = styled.div `
     width: 15%;
     height: 100%;

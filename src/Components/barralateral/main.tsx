@@ -22,11 +22,12 @@ const Barlateral: React.FC<imagemProps> = ({ img }) => {
         </BarLateral>
 )}
 
+
 const MenuComponent = () => {
     const navigate = useNavigate();
 
     const handleClicklogout = () => {
-        navigate('/')
+        navigate('/logout')
     }
     const handleClickCadastro = () => {
         navigate('/')
@@ -46,17 +47,17 @@ const MenuComponent = () => {
 
     return (
         <Menu>
-            <Buttonmenu title='Home' onClick={(handleClickHome)}>
+            <Buttonmenu title='Home' onClick={(handleClickHome)} to="/home">
                 <Stack direction="row" spacing={1}>
                     <HomeIcon fontSize='medium'/>
                 </Stack>
             </Buttonmenu>
-            <Buttonmenu title='Justificar Faltas' onClick={(handleClickJustificar)}>
+            <Buttonmenu title='Justificar Faltas' onClick={(handleClickJustificar)} to="/justificarponto">
                 <Stack spacing={1}>
                     <ArticleIcon fontSize='medium'/>
                 </Stack>
             </Buttonmenu>
-            <Buttonmenu title='Corrigir Ponto' onClick={(handleClickCorrigir)}>
+            <Buttonmenu title='Corrigir Ponto' onClick={(handleClickCorrigir)} to="/corrigirponto">
                 <Stack>
                     <EditIcon fontSize='medium'/>
                 </Stack>

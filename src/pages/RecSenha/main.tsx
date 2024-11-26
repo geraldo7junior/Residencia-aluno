@@ -24,17 +24,23 @@ const RecSenha = () => {
         <div className='senha'>
             <Barlateral img={background2}/>
             <div className='RecSenha'>
-                <ButtonSmall title='Voltar' onClick={handleClickLogin}>
+                <div className='BotaoFlutuante'>
+                    <ButtonSmall title='Voltar' onClick={handleClickLogin}>
                         <Stack direction="row">
                             <ArrowBackIcon fontSize="small"/>
                         </Stack>
-                    </ButtonSmall> 
+                    </ButtonSmall>
+                </div> 
                     <div className='CabSenha'>
                         <h1>Se perdeu? A gente te acha!</h1>
                     </div>
-                    <InputEmail label='Email *'/>
-            
-                <ButtonPrimary title="Recuperar Senha" onClick={handleClickRecSenha} />
+                    <div className='InputRecSenha'>
+                        <InputEmail label='Email *'/>
+                        <ButtonPrimary title="Recuperar Senha" onClick={handleClickRecSenha} />
+                        <div className='TextDownSenha'>
+                            <a href="/cadastro">Ainda não é cadastrado? <strong>Crie agora mesmo!</strong></a>
+                        </div>
+                    </div>
             </div>
         </div>
         </>

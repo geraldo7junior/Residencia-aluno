@@ -1,11 +1,11 @@
 import './styles.css'
 import background3 from '../../assets/background3.png'
-import { Barlateral } from '../../Components/barralateral/main'
 import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../../Components/Input/main'
 import { ButtonPrimary } from '../../Components/Button/main'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import { Dayjs } from 'dayjs';
+import { Barlateral } from '../../Components/barralateral/main'
 
 
 const Cadastro = () => {
@@ -48,9 +48,17 @@ const Cadastro = () => {
         }
 
         const userDados = { email, password, nome,  DataNasc: DataNasc ? DataNasc.format('YYYY-MM-DD') : '', cargo };
-        localStorage.setItem("userData", JSON.stringify(userDados));
+        const existingUsers = JSON.parse(localStorage.getItem("userData") || "[]");
+        
+        const userExists = existingUsers.some((user: { email: string }) => user.email === email);
+        if (userExists) {
+            alert("Email já cadastrado.");
+            return;
+        }
+        existingUsers.push(userDados);
+        localStorage.setItem("userData", JSON.stringify(existingUsers));
+
         alert("Cadastro realizado com sucesso!");
-        console.log("Passou aqui4");
         navigate("/");
     };
 
@@ -63,7 +71,7 @@ const Cadastro = () => {
                 <div className='CabecalhoCadastro'>
                     <h1>Cadastre-se! É de graça!</h1>
                 </div>
-                <div>
+                <div className='CadastroInput'>
                   <InputEmail label="Email *" onChange={(e) => setEmail(e.target.value)} />
                   <InputConfirmarEmail label="Confirme seu Email *" onChange={(e) => setConfirmarEmail(e.target.value)} />
                   <InputPassword label='Senha *' onChange={(e) => setPassword(e.target.value)}/>
@@ -77,7 +85,7 @@ const Cadastro = () => {
                 
                 <ButtonPrimary title="Finalizar Cadastro" onClick={handleRegister}/>
                 <div className='TextDown'>
-                    <h3><a href="/">Já tem uma conta? <strong>Logue agora!</strong></a></h3>
+                    <a href="/">Já tem uma conta? <strong>Logue agora!</strong></a>
                 </div>
             </div>
         </div>

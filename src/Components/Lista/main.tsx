@@ -111,14 +111,6 @@ const ListCorrigirPontos: React.FC = () => {
         }
     };
 
-    const handleSolicitacao = () => {
-        if (selectedHours.length > 0) {
-            alert(`Solicitação enviada para os horários: ${selectedHours.join(", ")}`);
-        } else {
-            alert("Nenhum horário selecionado!");
-        }
-    };
-
     return (
         <Container>
             <Table>
