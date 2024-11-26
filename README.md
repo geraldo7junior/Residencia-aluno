@@ -1,50 +1,109 @@
-# React + TypeScript + Vite
+# Residência Tecnológica Porto Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Desafio - Sistema Web de Gerenciamento de ponto
 
-Currently, two official plugins are available:
+Este projeto é um desafio proposto pela **SiDi** para construir **Sistema Web de Gerenciamento de ponto** desenvolvido por alunos do curso de **Análise e Desenvolvimento de Sistemas** do 2º período da **Faculdade Senac Pernambuco**. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Contexto
+Colaboradores esquecem com frequência de bater o ponto, isso acaba gerando problemas como: 
 
-## Expanding the ESLint configuration
+- Inconsistência na folha de pagamento; 
+- Tempo gasto para validar as batidas de ponto; 
+- Inconsistência no número de horas impactando no controle financeiro do projeto. 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Resultado esperado
 
-- Configure the top-level `parserOptions` property like this:
+- Aumento da frquência na batida de ponto; 
+- Otimizar o tempo de gerenciamento das horas; 
+- Maior acurácia no controle financeiro do projeto/empresa. 
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend**
+    - React
+    - Typescript
+    - Styled-components
+    - HTML 
+    - MUI (Biblioteca de componentes React)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **UX**
+    - Design System 
+    - Prototipação com Figma
+    - Acessibilidade
+    - Arquitetura da Informação 
+    - Pitch
+---
+## Escopo do Projeto 
+
+Aqui está a tabela corrigida: 
+
+markdown
+| Tela           | Funcionalidade                                                                     |
+|----------------|-------------------------------------------------------------------------------------|
+| Login/ Logout  | 1. Login: Logar/ Cadastrar novo usuário (Com Nome, e-mail e senha);                |
+| Login/ Logout  | 2. Esqueci a minha senha;                                                           |
+| Inicial        | 3. Bater Ponto;                                                                     |
+| Inicial        | 4. Corrigir Ponto;                                                                  |
+| Inicial        | 5. Minha localização / Mapa da localização atual (geolocalização);                  |
+| Lista de datas | 6. Listar datas com status de pontos batidos ou não;                                |
+| Lista de datas | 7. Justificar abono de faltas por data com anexo em imagem ou PDF.                  |
+
+
+
+## Configuração do Ambiente
+
+### Requisitos
+
+1. **Node.js**: Instale o Node.js na versão `18.17.0`.
+2. **nvm**: Instale o Node Version Manager para facilitar a gestão de versões do Node.js.
+3. **npm**: Instale as dependências.
+
+### Instalação
+
+Clone o repositório:
+
+   ```bash
+   git clone https://github.com/AllanVitorM/Residencia.git
+   ```
+
+### Configurar o Frontend
+
+1. Use a versão do Node.js especificada:
+
+    ```bash
+    nvm use
+    ```
+
+1. Navegue até a pasta do frontend:
+
+    ```bash
+    cd Residencia
+    ```
+
+3. Instale as dependências do frontend:
+
+    ```bash
+    npm install
+    ```
+
+## Executando o Projeto
+### Frontend
+Para iniciar o frontend, execute:
+
+    cd frontend/my-dashboard
+    npm start
+
+---
+
+## Equipe 
+
+> **Allan Almeida**: (https://github.com/AllanVitorM/Residencia.git) 
+> **André**: ()
+> **Bruno Pereira**: ()
+> **Heloísa Costa**: ()
+> **Lucas Vanderlei**: ()
+> **Pedro Passoavante**: ()
+> **Vinícius Nunes**: ()
+
