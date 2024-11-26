@@ -92,8 +92,7 @@ Clone o repositório:
 ### Frontend
 Para iniciar o frontend, execute:
 
-    cd frontend/my-dashboard
-    npm start
+    npm run dev
 
 ---
 
