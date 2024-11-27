@@ -98,11 +98,11 @@ Para iniciar o frontend, execute:
 
 ## Equipe 
 
-> **Allan Almeida**: (https://github.com/AllanVitorM/Residencia.git) 
+> **Allan Almeida**: (https://github.com/AllanVitorM) 
 > **André**: ()
-> **Bruno Pereira**: ()
-> **Heloísa Costa**: ()
+> **Bruno Pereira**: (https://github.com/BrunoPereiraM)
+> **Heloísa Costa**: (https://github.com/heloiusa)
 > **Lucas Vanderlei**: ()
 > **Pedro Passoavante**: ()
-> **Vinícius Nunes**: ()
+> **Vinícius Nunes**: (https://github.com/ViniciusNunes92)
 
