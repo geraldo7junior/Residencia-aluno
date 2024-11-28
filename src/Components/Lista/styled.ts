@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 80%;
-    height: calc(70vh - 120px); /* Certifique-se que essa altura é adequada para o layout geral */
+    height: calc(50vh - 120px); /* Certifique-se que essa altura é adequada para o layout geral */
     overflow-y: auto;
     padding-right: 10px;
     margin-top: 20px;
@@ -12,8 +12,7 @@ export const Container = styled.div`
     justify-content: space-between;  
     align-items: center; 
     background: #ffffff;
-    position: relative; /* Define que o Container segue o fluxo da página */
-    z-index: 1; /* Certifique-se de que o z-index seja menor que o do Header */
+    position: relative; /* Define que o Container segue o fluxo da página */  
 `;
 
 // Tabela

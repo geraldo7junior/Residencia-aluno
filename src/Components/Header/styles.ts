@@ -8,7 +8,7 @@ export const Container = styled.div`
     box-shadow: 0px 4px 26px #BC9AD640;
     margin: 20px 100px;
     position: fixed;
-    z-index: 10; /* Garante que o header está acima da tabela */
+    z-index: 100; /* Garante que o header está acima da tabela */
     left: 10%;
     display: flex;
     justify-Content: space-between;  
