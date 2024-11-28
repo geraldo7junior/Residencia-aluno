@@ -6,13 +6,13 @@ import { Barlateral } from '../../Components/barralateral/main'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
+
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-
+ 
   const handleLogin = () => {
 
     const storedUsers = JSON.parse(localStorage.getItem("userData") || "[]");

@@ -26,12 +26,22 @@ export const BarLateral = styled.div `
 `
 export const Menu = styled.div `
     width: 15%;
-    height: 100%;
+    height: 100vh;
     background-color: #F5F0F5;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    img {
+       position: absolute;
+        width: 12%;
+        top: 14%;
+    }
+
+    hr {
+        width: 90%;
+    }
 
 `
 

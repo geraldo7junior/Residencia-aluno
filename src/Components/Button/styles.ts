@@ -17,6 +17,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     justify-Content: center;  
     align-Items: center;  
     align-Self: stretch; 
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 
     color: #000000;
     border-Radius: 4px;  
@@ -40,14 +41,15 @@ export const ButtonContainer = styled.button<ButtonProps> `
   export const ButtonSm = styled.button<ButtonProps> `
   
     display: flex;
-    margin: 40px 8px;
+    margin: 20px 3px;
     padding: 10px;  
     position: relative;
 
     flex-direction: row;
     justify-Content: center;  
     align-Items: center;  
-    align-Self: stretch; 
+    align-Self: stretch;
+    font-family: "Kumbh Sans", Helvetica, sans-serif; 
 
     color: #000000;
     border-Radius: 4px;  
@@ -73,13 +75,15 @@ export const ButtonContainer = styled.button<ButtonProps> `
   export const ButtonMenu = styled.button<ButtonProps & { isActive?: boolean }> `
     display: flex;
     margin: 10px 30px;
-    position relative;
+    position: relative;
 
     flex-direction: row;
     justify-Content: center;
     align-items: center;
     align-self: stretch;
-    border: none;
+    border: 0.5px solid;
+    border-color: #FFD8FF;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 
     color: ${(props) => (props.isActive ? "#000000" : "#000000")};
     background: ${(props) => (props.isActive ? "#4ADD8C" : "#FFFFFF")};
@@ -108,6 +112,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     align-items: center;
     align-self: stretch;
     border: none;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 
     color: ##101010;
     border-Radius: 4px;

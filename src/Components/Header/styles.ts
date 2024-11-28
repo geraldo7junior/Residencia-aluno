@@ -2,26 +2,27 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-    width: 70%;
+    width: 80%;
     height: 100px;
     background: #FFFFFF;
     box-shadow: 0px 4px 26px #BC9AD640;
     margin: 20px 100px;
     position: fixed;
-
+    z-index: 10; /* Garante que o header está acima da tabela */
+    left: 10%;
     display: flex;
     justify-Content: space-between;  
     align-Items: center;  
 `
 
 export const ContainerSecond = styled.div`
-    width: 20%;
+    width: 30%;
     height: 100px;
     background: #FFFFFF;
     box-shadow: 0px 4px 26px #BC9AD640;
     margin: 20px 100px;
     position: fixed;
-
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
     display: flex;
     justify-Content: space-between;  
     align-Items: center;  
@@ -34,6 +35,7 @@ export const ContainerMiddle = styled.div`
     box-shadow: 0px 4px 26px #BC9AD640;
     margin: 20px 100px;
     position: relative;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 
     display: flex;
     justify-Content: center;  
@@ -55,9 +57,9 @@ export const Row = styled.div `
 
 export const Diaria = styled.div `
     margin: 10px;
-    padding: 0px 100px;
+    padding: 0px 70px;
     p {
-        font-family: 'Open Sans';
+        font-family: "Kumbh Sans", Helvetica, sans-serif;
         font-style: normal;
         font-size: 20px;
     }
@@ -66,7 +68,7 @@ export const UserDados = styled.div `
     margin: 10px;
     padding: 0px 10px;
     p {
-        font-family: 'Open Sans';
+        font-family: "Kumbh Sans", Helvetica, sans-serif;
         font-style: normal;
         font-size: 20px;
     }
@@ -76,7 +78,7 @@ export const UserDados = styled.div `
 export const Hour = styled.div`
     padding: 0 310px;
     p {
-        font-family: 'Open Sans';
+        font-family: "Kumbh Sans", Helvetica, sans-serif;
         font-style: normal;
         font-size: 20px;
         border: 1px solid;

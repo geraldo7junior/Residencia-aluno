@@ -38,7 +38,11 @@ const List: React.FC = () => {
             if (!currentUser) return;
     
             const registrosAtualizados = JSON.parse(localStorage.getItem(`registros_${currentUser}`) || "[]");
-            setRegistros(registrosAtualizados);
+            setRegistros((prevRegistros) => {
+                // Evita re-renderização desnecessária
+                if (JSON.stringify(prevRegistros) === JSON.stringify(registrosAtualizados)) return prevRegistros;
+                return registrosAtualizados;
+            });
         };
     
         window.addEventListener("storage", atualizarRegistros);

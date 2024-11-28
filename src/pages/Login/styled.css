@@ -12,14 +12,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 }
 
 @media (max-width: 1366px) {
     .cabecalho {
         width: 60%; 
         margin-left: 60px; 
-        margin-top: 100px; 
-    }
+        margin-top: 100px;
+        font-family: "Kumbh Sans", Helvetica, sans-serif; 
+        }
 }
 
 .Logincontainer {
@@ -61,6 +63,7 @@
 .CadSenha > div {
     margin: 0px 70px 0 0;
     padding: 1px 8px;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 }
 
 @media (max-width: 1366px) {
@@ -69,13 +72,28 @@
         margin: 0 100px 0 0; /* Reduz a margem à direita */
         padding: 4px 8px; /* Ajuste o padding */
         width: 14px;
+        font-family: "Kumbh Sans", Helvetica, sans-serif;
     }
+}
+
+.map-container {
+    position: absolute; /* Fixar o mapa dentro do container pai */
+    bottom: 20px; /* Distância da parte inferior da tela */
+    right: 20px; /* Distância da lateral direita */
+    height: 150px; /* Altura reduzida */
+    width: 150px; /* Largura reduzida */
+    z-index: 1000; /* Coloca o mapa acima de outros elementos */
+    border: 2px solid #ddd; /* Adiciona borda para destacar o mapa */
+    border-radius: 8px; /* Borda arredondada */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
 }
 
 a {
     color: #000;
     text-decoration: none;
     font-size: 16px !important;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 }
 
 a:hover {

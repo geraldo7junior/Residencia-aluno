@@ -10,7 +10,7 @@
     margin-left: 120px;
     margin-bottom: 20px; 
     margin-top: 180px;
-
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 }
 
 .RecSenha {
@@ -58,6 +59,7 @@ a {
     color: #000;
     text-decoration: none;
     font-size: 16px !important;
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 }
 
 a:hover {

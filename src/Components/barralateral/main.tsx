@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom'
 import { Stack } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import EditIcon from '@mui/icons-material/Edit';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ArticleIcon from '@mui/icons-material/Article';
+import LogoSiDi from '../../assets/Logo-Colorido.png';
+
 
 interface imagemProps {
     img: string;
@@ -18,7 +19,7 @@ interface imagemProps {
 const Barlateral: React.FC<imagemProps> = ({ img }) => {
    return (
         <BarLateral>
-            <img src={img} alt='teste' />
+            <img src={img} alt='Imagem meramente ilustrativa' />
         </BarLateral>
 )}
 
@@ -29,10 +30,7 @@ const MenuComponent = () => {
     const handleClicklogout = () => {
         navigate('/logout')
     }
-    const handleClickCadastro = () => {
-        navigate('/')
-    }
-    
+
     const handleClickHome = () => {
         navigate('/home')
     }
@@ -47,11 +45,13 @@ const MenuComponent = () => {
 
     return (
         <Menu>
+            <img src={LogoSiDi} alt='Logo'/>
             <Buttonmenu title='Home' onClick={(handleClickHome)} to="/home">
                 <Stack direction="row" spacing={1}>
                     <HomeIcon fontSize='medium'/>
                 </Stack>
             </Buttonmenu>
+            <hr />
             <Buttonmenu title='Justificar Faltas' onClick={(handleClickJustificar)} to="/justificarponto">
                 <Stack spacing={1}>
                     <ArticleIcon fontSize='medium'/>
@@ -62,11 +62,7 @@ const MenuComponent = () => {
                     <EditIcon fontSize='medium'/>
                 </Stack>
             </Buttonmenu>
-            <Buttonmenu title='Usuário' onClick={(handleClickCadastro)}>
-                <Stack spacing={1}>
-                    <AccountBoxIcon fontSize='medium'/>
-                </Stack>
-            </Buttonmenu>
+            <hr />
             <Buttonmenu title='Sair' onClick={(handleClicklogout)}>
                 <Stack spacing={2}>
                     <LogoutIcon fontSize='medium'/>
