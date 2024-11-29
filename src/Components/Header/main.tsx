@@ -140,7 +140,7 @@ const Header: React.FC = () => {
     )
   }
 
-const containermiddle = () => {
+const Containermiddle = () => {
     return(
         <ContainerMiddle>
         
@@ -148,4 +148,4 @@ const containermiddle = () => {
     )
 }
 
-  export { Header, HeaderCorrigirPonto, containermiddle }
+  export { Header, HeaderCorrigirPonto, Containermiddle }

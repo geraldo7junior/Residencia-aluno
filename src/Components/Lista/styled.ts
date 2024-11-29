@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 80%;
-    height: calc(50vh - 120px); /* Certifique-se que essa altura é adequada para o layout geral */
+    height: calc(40vh - 120px); /* Certifique-se que essa altura é adequada para o layout geral */
     overflow-y: auto;
     padding-right: 10px;
     margin-top: 20px;

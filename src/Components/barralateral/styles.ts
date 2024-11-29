@@ -35,7 +35,7 @@ export const Menu = styled.div `
 
     img {
        position: absolute;
-        width: 12%;
+        width: 10%;
         top: 6%;
     }
 

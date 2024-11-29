@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-    width: 80%;
+    width: 70%;
     height: 100px;
     background: #FFFFFF;
     box-shadow: 0px 4px 26px #BC9AD640;
     margin: 20px 100px;
     position: fixed;
     z-index: 100; /* Garante que o header está acima da tabela */
-    left: 10%;
+    left: 15%;
     display: flex;
     justify-Content: space-between;  
     align-Items: center;  
@@ -57,7 +57,7 @@ export const Row = styled.div `
 
 export const Diaria = styled.div `
     margin: 10px;
-    padding: 0px 70px;
+    padding: 0px 100px;
     p {
         font-family: "Kumbh Sans", Helvetica, sans-serif;
         font-style: normal;
