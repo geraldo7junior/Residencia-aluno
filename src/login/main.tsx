@@ -1,5 +1,5 @@
 import './styled.css';
-import login from '../../assets/Login.svg';
+import login from '../assets/Login.svg';
 import { ButtonPrimary } from '../Components/Button/main';
 import { InputEmail, InputPassword } from '../Components/Input/main';
 import { Barlateral } from '../Components/barralateral/main'
