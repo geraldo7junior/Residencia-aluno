@@ -13,6 +13,7 @@ export const Container = styled.div`
     align-items: center; 
     background: #ffffff;
     position: relative; /* Define que o Container segue o fluxo da página */  
+    font-family: "Kumbh Sans", Helvetica, sans-serif;
 `;
 
 // Tabela
@@ -34,6 +35,7 @@ export const HeaderRow = styled.tr`
   top: 0; /* Garante que ele fique no topo */
   z-index: 2; /* Coloca o cabeçalho acima do restante */
   border-bottom: 1px solid #ddd;
+  font-family: "Kumbh Sans", Helvetica, sans-serif;
 `;
 
 // Linha da tabela
@@ -47,7 +49,7 @@ export const TableRow = styled.tr<{ highlight: boolean }>`
 // Célula da tabela
 export const TableCell = styled.td`
   padding: 12px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center; /* Centraliza horizontalmente */
   vertical-align: middle; /* Centraliza verticalmente */
   border-bottom: 1px solid #ddd;
