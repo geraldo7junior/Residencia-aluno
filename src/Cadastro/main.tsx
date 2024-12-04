@@ -1,5 +1,5 @@
 import './styles.css'
-import Cadastroimg from '../../assets/Cadastro.svg'
+import Cadastroimg from '../assets/Cadastro.svg'
 import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../Components/Input/main'
 import { ButtonPrimary } from '../Components/Button/main'
 import { useNavigate } from 'react-router-dom';

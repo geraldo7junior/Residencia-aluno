@@ -1,5 +1,5 @@
 import './styles.css';
-import logout from  '../../assets/logout.svg';
+import logout from  '../assets/logout.svg';
 import { Barlateral } from '../Components/barralateral/main';
 import { ButtonPrimary } from '../Components/Button/main';
 import { useNavigate } from 'react-router-dom';
