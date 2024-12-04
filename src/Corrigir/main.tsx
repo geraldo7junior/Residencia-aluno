@@ -1,8 +1,8 @@
 import "./styles.css";
-import { MenuComponent } from "../../Components/barralateral/main";
-import { HeaderCorrigirPonto } from "../../Components/Header/main";
-import { ListCorrigirPontos } from "../../Components/Lista/main";
-import { ButtonPrimary } from "../../Components/Button/main";
+import { MenuComponent } from "../Components/barralateral/main";
+import { HeaderCorrigirPonto } from "../Components/Header/main";
+import { ListCorrigirPontos } from "../Components/Lista/main";
+import { ButtonPrimary } from "../Components/Button/main";
 
 const handleSolicitarCorrecao = () => {
     alert("Sua solicitação de alterar ponto foi enviado para o nosso RH. ")

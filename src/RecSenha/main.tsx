@@ -1,11 +1,11 @@
 import './styles.css';
 import RecuperarSenha from  '../../assets/RecSenha.svg';
-import { Barlateral } from '../../Components/barralateral/main';
-import { ButtonPrimary, ButtonSmall } from '../../Components/Button/main';
+import { Barlateral } from '../Components/barralateral/main';
+import { ButtonPrimary, ButtonSmall } from '../Components/Button/main';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Stack } from '@mui/material';
-import { InputEmail } from '../../Components/Input/main';
+import { InputEmail } from '../Components/Input/main';
 
 
 

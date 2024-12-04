@@ -1,7 +1,7 @@
 import './styled.css';
-import { MenuComponent } from "../../Components/barralateral/main";
-import { Header } from '../../Components/Header/main';
-import { List } from '../../Components/Lista/main';
+import { MenuComponent } from "../Components/barralateral/main";
+import { Header } from '../Components/Header/main';
+import { List } from '../Components/Lista/main';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useState, useEffect } from 'react';

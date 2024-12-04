@@ -1,9 +1,9 @@
 import "./styles.css";
-import { MenuComponent } from "../../Components/barralateral/main";
-import InputFileUpload from "../../Components/UploadFiles/main";
-import { Header } from "../../Components/Header/main";
-import { CommentInput } from "../../Components/Input/main";
-import { ContainerMiddle } from "../../Components/Header/styles";
+import { MenuComponent } from "../Components/barralateral/main";
+import InputFileUpload from "../Components/UploadFiles/main";
+import { Header } from "../Components/Header/main";
+import { CommentInput } from "../Components/Input/main";
+import { ContainerMiddle } from "../Components/Header/styles";
 
 const Justificar = () => {
   return (<>
