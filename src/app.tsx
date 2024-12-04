@@ -1,12 +1,12 @@
 import './styles.css'
 import { Route, BrowserRouter as Router, Routes} from "react-router-dom"
 import { Login } from './login/main';
-import { RecSenha } from './RecSenha/main';
-import { Cadastro } from './Cadastro/main'
+import { RecSenha } from './pages/RecSenha/main';
+import { Cadastro } from './pages/Cadastro/main'
 import { Home } from './Home/main';
 import { Justificar } from './Justificar/main';
 import { CorrigirPonto } from './Corrigir/main';
-import { Logout } from './logout/main'
+import { Logout } from './pages/logout/main'
 
 function app () {
     return(
