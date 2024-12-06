@@ -1,5 +1,5 @@
 import './styles.css';
-import RecuperarSenha from  '../../assets/RecSenha.svg';
+import RecuperarSenha from  '../assets/RecSenha.svg';
 import { Barlateral } from '../Components/barralateral/main';
 import { ButtonPrimary, ButtonSmall } from '../Components/Button/main';
 import { useNavigate } from 'react-router-dom';
