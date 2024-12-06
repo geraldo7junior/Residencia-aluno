@@ -1,11 +1,11 @@
 import './styles.css'
-import Cadastroimg from '../../assets/Cadastro.svg'
-import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../../Components/Input/main'
-import { ButtonPrimary } from '../../Components/Button/main'
+import Cadastroimg from '../assets/Cadastro.svg'
+import { InputEmail, InputConfirmarPassword, InputName, InputPassword, InputConfirmarEmail ,InputCargo, DateInput } from '../Components/Input/main'
+import { ButtonPrimary } from '../Components/Button/main'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import { Dayjs } from 'dayjs';
-import { Barlateral } from '../../Components/barralateral/main'
+import { Barlateral } from '../Components/barralateral/main'
 
 
 const Cadastro = () => {
